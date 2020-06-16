@@ -1,0 +1,27 @@
+Mathematical Expectation is an important concept in Probability Theory. 
+Mathematically, for a discrete variable X with probability function P(X), the expected value E[X] is given by (Σxi * P(xi)).
+Example, for a dice-throw experiment, the set of discrete outcomes is { 1,2,3,4,5,6} and each of this outcome has the same probability 1/6. 
+Hence, the expected value of this experiment will be 1/6*(1+2+3+4+5+6) = 21/6 = 3.5. 
+
+For a continuous variable X with probability density function P(x) , the expected value E[X] is given by (∫x * P(x)dx). 
+
+It is important to understand that "expected value" is not same as "most probable value" - rather, it need not even be one of the probable 
+values. For example, in a dice-throw experiment, the expected value, viz 3.5 is not one of the possible outcomes at all.
+
+The rule of "linearity of of the expectation" says that E[x1+x2] = E[x1] + E[x2].
+
+
+Problems 1. What is the expected number of coin flips for getting a head?
+Ans:
+
+Let the expected number of coin flips be x. Then we can write an equation for it -
+a. If the first flip is the head, then we are done. The probability of this event is 1/2 and the number of coin flips for this event is 1.
+b. If the first flip is the tails, then we have wasted one flip. Since consecutive flips are independent events, the solution in this
+case can be recursively framed in terms of x - The probability of this event is 1/2 and the expected number of coins flips now onwards 
+is x. But we have already wasted one flip, so the total number of flips is x+1.
+The expected value x is the sum of the expected values of these two cases. Using the rule of linerairty of the expectation and the definition of Expected value, we get
+x = (1/2)(1) + (1/2) (1+x)
+Solving, we get x = 2.
+
+Thus the expected number of coin flips for getting a head is 2.
+
